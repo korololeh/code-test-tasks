@@ -7,8 +7,9 @@ public class IncreaseDigitInString {
     public static void main(String[] args) {
 //          String input = "DRMV45QWE875675IS1234567";
 //          String input = "DRMV45QWE875675IS1234569";
-          String input = "DRMV45QWE875675IS0001234569";
+//          String input = "DRMV45QWE875675IS0001234569";
 //        String input = "DRMV45QWE875675IS000000";
+        String input = "DRMV45QWE875675IS999999";
         System.out.println(increasedNumber(input));
     }
 
@@ -22,8 +23,8 @@ public class IncreaseDigitInString {
         } else {
             return input;
         }
-        if(digits.equals("0".repeat(digits.length()))){
-            return input.replace(digits,digits.replaceAll("0","9"));
+        if(digits.equals("9".repeat(digits.length()))){
+            return input.replace(digits,digits.replaceAll("9","0"));
         }
 
         int number = Integer.parseInt(digits);
